@@ -2,6 +2,7 @@ package model.dao;
 
 import java.util.List;
 
+import model.entities.Department;
 import model.entities.Seller;
 
 public interface SellerDao {
@@ -11,4 +12,5 @@ public interface SellerDao {
 	void deleteById(Integer id);// deletar no banco de dados
 	Seller findById(Integer id);// buscar no banco de dados
 	List<Seller> findAll();// buscar no banco de dados
+	List<Seller> findByDepartment(Department department);// buscar no banco de dados
 }
