@@ -1,6 +1,7 @@
 package model.dao;
 
 import db.DB;
+import model.dao.impl.DepartmentDaoJDBC;
 import model.dao.impl.SellerDaoJDBC;
 
 // // A classe DaoFactory é responsável por criar instâncias de objetos DAO (Data Access Object).
@@ -14,7 +15,16 @@ public class DaoFactory {
     public static SellerDao createSellerDao() {
         return new SellerDaoJDBC(DB.getConnection());
     }
-
+    
+    // Método que retorna uma instância de DepartmentDao.
+    
+    public static DepartmentDao createDepartmentDao() {
+    	
+    	return new DepartmentDaoJDBC(DB.getConnection());
+    }
+    
+    
+    
    
 }
 
